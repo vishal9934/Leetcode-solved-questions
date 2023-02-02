@@ -7,7 +7,7 @@ class Solution {
         int map[]=new int[26];
         int freq=0;
         for(int i=0;i<order.length();i++){
-            map[order.charAt(i)-'a']=i;
+            map[order.charAt(i)-'a']=freq++;
         }
         
         for(int i=1;i<words.length;i++){
@@ -24,7 +24,7 @@ class Solution {
                     break;
                 }
             }
-            if(!flag && first.length()>second.length()){
+            if( flag==false && first.length()>second.length()){
                 return false;
             }
         }
