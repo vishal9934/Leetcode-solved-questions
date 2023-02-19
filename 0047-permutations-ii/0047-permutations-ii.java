@@ -8,6 +8,7 @@ class Solution {
         Set<List<Integer>> ans=new HashSet<>();
         rec(0,nums,ans);
         return new ArrayList(ans);
+       
     }
     void rec(int index,int arr[],Set<List<Integer>> ans){
         
@@ -18,7 +19,7 @@ class Solution {
             for(int i=0;i<arr.length;i++){
                 ds.add(arr[i]);
             }
-            ans.add(new ArrayList<>(ds));
+            ans.add(ds);
             return;
         }
         for(int i=index;i<arr.length;i++){
