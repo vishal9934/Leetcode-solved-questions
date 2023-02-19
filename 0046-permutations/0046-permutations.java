@@ -18,7 +18,7 @@ class Solution {
             for(int i=0;i<arr.length;i++){
                 ds.add(arr[i]);
             }
-            ans.add(new ArrayList<>(ds));
+            ans.add(ds);
             return;
         }
         for(int i=index;i<arr.length;i++){
