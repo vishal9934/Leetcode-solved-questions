@@ -3,20 +3,17 @@
  * @return {number}
  */
 var diagonalSum = function(mat) {
-    let sum=0
-    let principleDiagonal=0;
-    let secondaryDiagonal=0;
-    for(let i=0;i<mat.length;i++){
-        for(let j=0;j<mat.length;j++){
-            if(i==j){
-                principleDiagonal +=mat[i][j];
-            }
-            else if(i+j==mat.length-1){
-                secondaryDiagonal +=mat[i][j];
-            }
-        }
-    
+   
+    let n=mat.length;
+    let mid=Math.floor(n/2)
+    let sum =0;
+    for(let i=0;i<n;i++){
+        sum+=mat[i][i] + mat[i][n-1-i];
+        
+        
     }
-    sum=principleDiagonal+secondaryDiagonal;
-    return sum
+    if(n%2!==0){
+        sum-=mat[mid][mid];
+    }
+    return sum;
 };
