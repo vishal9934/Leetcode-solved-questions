@@ -1,19 +1,18 @@
-class Solution {
-    public int[] twoSum(int[] arr, int target) {
-        int n=arr.length;
-        int ans[]=new int[2];
-        HashMap<Integer,Integer> mp=new HashMap<>();
-
-        for(int i=0;i<n;i++){
-            if(mp.containsKey(target-arr[i])){
-                ans[0]=mp.get(target-arr[i]);
-                ans[1]=i;
-                return ans;
-            }
-            
-                mp.put(arr[i],i);
-            
+/**
+ * @param {number[]} nums
+ * @param {number} target
+ * @return {number[]}
+ */
+var twoSum = function(nums, target) {
+    let ans=[];
+    let map=new Map();
+    for(let i=0;i<nums.length;i++){
+        if(map.has(target-nums[i])){
+            ans.push(map.get(target-nums[i]));
+            ans.push(i);
         }
-        return ans;
+        map.set(nums[i],i)
     }
-}
+    return ans;
+    
+};
