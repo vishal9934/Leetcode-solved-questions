@@ -10,9 +10,9 @@ class Solution {
                 ans[1]=i;
                 return ans;
             }
-            else{
+            
                 mp.put(arr[i],i);
-            }
+            
         }
         return ans;
     }
