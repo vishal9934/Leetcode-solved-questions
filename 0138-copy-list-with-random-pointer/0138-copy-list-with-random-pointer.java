@@ -12,20 +12,6 @@ class Node {
     }
 }
 */
-//    ptr = head;
-//     while (ptr != null) {
-//       if (ptr.random != null) {
-//         Node ptrCopy = map.get(ptr);
-//         Node randomCopy = map.get(ptr.random);
-
-//         ptrCopy.random = randomCopy;
-//       }
-//       ptr = ptr.next;
-//     }
-
-//     // ignore sentinel node
-//     copy = copy.next;
-//     return copy;
 
 class Solution {
     public Node copyRandomList(Node head) {
